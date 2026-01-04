@@ -3,7 +3,7 @@
   RAPPORT DE PRIORISATION DES PROBLÈMES CYCLABLES
 ==========================================================
 
-Date: 2026-01-04 15:41:50
+Date: 2026-01-04 16:30:04
 
 DONNÉES ANALYSÉES:
 - Incidents catégorisés: 1639
