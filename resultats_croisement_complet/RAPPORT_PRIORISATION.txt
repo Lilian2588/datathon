@@ -1,0 +1,42 @@
+
+==========================================================
+  RAPPORT DE PRIORISATION DES PROBLÈMES CYCLABLES
+==========================================================
+
+Date: 2026-01-04 15:41:50
+
+DONNÉES ANALYSÉES:
+- Incidents catégorisés: 1639
+- Points de comptage: 24
+- Flux total mesuré: 54,781 passages
+
+RÉPARTITION DES PRIORITÉS:
+priorite_label
+ÉLEVÉE      998
+FAIBLE      576
+CRITIQUE     65
+
+CATÉGORIES LES PLUS CRITIQUES (score moyen):
+categorie_detectee
+Carrefours dangereux             63.97
+Infrastructure manquante         60.94
+Danger & Vitesse                 56.32
+Conflit Voiture/Stationnement    46.20
+Travaux & Maintenance            44.73
+
+SEUILS DE FLUX UTILISÉS:
+- Flux faible (🟢): < 1,354 passages
+- Flux moyen (🟡): 1,354 - 1,354 passages
+- Flux élevé (🟠): 1,354 - 8,884 passages
+- Flux critique (🔴): > 8,884 passages (+ distance < 500m)
+
+SCORE D'IMPORTANCE GLOBAL:
+- Pondération flux: 40%
+- Pondération urgence: 30%
+- Pondération proximité: 20%
+- Pondération facilité: 10%
+
+Score moyen: 49.95
+Score max: 99.47
+
+==========================================================
