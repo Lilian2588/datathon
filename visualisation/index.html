@@ -36,9 +36,9 @@
         <div class="filter-group">
             <label class="select-label">Difficulté de résolution :</label>
             <div class="checkbox-group">
-                <label class="legend-item"><div class="legend-color color-vert"></div><input type="checkbox" id="filterFacile" checked><span>Facile (Quick Win)</span></label>
+                <label class="legend-item"><div class="legend-color color-vert"></div><input type="checkbox" id="filterFacile" checked><span>Facile</span></label>
                 <label class="legend-item"><div class="legend-color color-orange"></div><input type="checkbox" id="filterMoyen" checked><span>Moyen</span></label>
-                <label class="legend-item"><div class="legend-color color-rouge"></div><input type="checkbox" id="filterDifficile" checked><span>Difficile (Structurel)</span></label>
+                <label class="legend-item"><div class="legend-color color-rouge"></div><input type="checkbox" id="filterDifficile" checked><span>Difficile</span></label>
             </div>
         </div>
 
@@ -164,7 +164,7 @@
                                 let content = `<div class="commune-tooltip"><div class="commune-title">${nom}</div>`;
                                 
                                 if (data) {
-                                    content += `<div class="commune-score">Note Sécurité: ${data.note}/6</div>`;
+                                    content += `<div class="commune-score">Note Sécurité: ${data.note}/5</div>`;
                                     // AJOUT DU TOP 3 ICI
                                     if (data.top3.length > 0) {
                                         content += `<div class="top-pb-title">Principaux Problèmes :</div><ul class="top-pb-list">`;
@@ -239,7 +239,7 @@
                                 </div>`;
                         });
                         
-                        // Ajout du Flux (Plus gros)
+                        // Ajout du Flux 
                         const flux = row.flux_proche ? Math.round(row.flux_proche) : "N/A";
                         popupHTML += `<div class="flux-info">Flux estimé : ${flux} vélos/j</div></div>`;
 
