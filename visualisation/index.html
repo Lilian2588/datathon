@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation Datathon Vélo - Finale</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="filter-panel">
+        <h3>Filtres & Légende</h3>
+        
+        <div class="filter-group">
+            <label for="mairieFilter" class="select-label">Commune :</label>
+            <select id="mairieFilter">
+                <option value="tous">Toutes les communes</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label class="select-label">Priorité :</label>
+            <div class="checkbox-group" style="flex-direction: row; flex-wrap: wrap;">
+                <label class="checkbox-label"><input type="checkbox" id="prioCritique" checked><span class="tag-prio prio-critique">Critique</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="prioElevee" checked><span class="tag-prio prio-elevee">Élevée</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="prioMoyenne" checked><span class="tag-prio prio-moyenne">Moyenne</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="prioFaible" checked><span class="tag-prio prio-faible">Faible</span></label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <label class="select-label">Difficulté de résolution :</label>
+            <div class="checkbox-group">
+                <label class="legend-item"><div class="legend-color color-vert"></div><input type="checkbox" id="filterFacile" checked><span>Facile</span></label>
+                <label class="legend-item"><div class="legend-color color-orange"></div><input type="checkbox" id="filterMoyen" checked><span>Moyen</span></label>
+                <label class="legend-item"><div class="legend-color color-rouge"></div><input type="checkbox" id="filterDifficile" checked><span>Difficile</span></label>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <label class="select-label">Catégories :</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" id="filterInfrastructure" checked><span>Infrastructure manquante</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterCarrefour" checked><span>Carrefours dangereux</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterAmenagement" checked><span>Aménagement inadapté</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterVitesse" checked><span>Vitesse / Conflits</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterSignalisation" checked><span>Signalisation</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterStationnement" checked><span>Stationnement</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterEntretien" checked><span>Entretien / Travaux</span></label>
+                <label class="checkbox-label"><input type="checkbox" id="filterAutre" checked><span>Autres</span></label>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    
+    <script>
+        const map = L.map('map').setView([45.7640, 4.8357], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap, © CARTO' }).addTo(map);
+        const markers = L.markerClusterGroup({ chunkedLoading: true, spiderfyOnMaxZoom: true, maxClusterRadius: 50 });
+        const colorMap = { 'green': '#22c55e', 'orange': '#f97316', 'red': '#ef4444' };
+        
+        function createCustomIcon(color) {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="background-color: ${colorMap[color]||'#3b82f6'}; width: 14px; height: 14px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);"></div>`,
+                iconSize: [18, 18], iconAnchor: [9, 9]
+            });
+        }
+
+        // --- OUTILS DE PARSING DE LISTE PYTHON STRING ---
+        function parsePythonList(str) {
+            if (!str) return [];
+            try {
+                const items = [];
+                const regex = /'([^']*)'/g; 
+                let match;
+                while ((match = regex.exec(str)) !== null) items.push(match[1]);
+                if (items.length === 0 && str.includes('[')) return JSON.parse(str.replace(/'/g, '"'));
+                return items.length > 0 ? items : [str];
+            } catch (e) { return [str]; }
+        }
+
+        function parsePythonListInt(str) {
+            if (!str) return [];
+            return str.replace(/[\[\]]/g, '').split(',').map(Number);
+        }
+
+        // --- DONNÉES GLOBALES ---
+        let allMarkers = [];
+        let communeData = {}; 
+        let geojsonLayer; 
+
+        // --- 1. CHARGEMENT DASHBOARD (Top 3 + Notes + Liste des noms pour le filtre) ---
+        Papa.parse('donnees_dashboard_communes.csv', {
+            download: true, header: true, dynamicTyping: true,
+            complete: function(res) {
+                
+                // Préparation du menu déroulant (Nom -> INSEE)
+                const communeList = []; 
+                const seenInsee = new Set();
+
+                res.data.forEach(row => {
+                    if (!row.INSEE) return;
+                    const code = String(row.INSEE);
+                    const nom = row.Nom_Commune || code;
+
+                    // 1. Stockage Data pour la Carte
+                    if (!communeData[code]) {
+                        communeData[code] = { note: row.Note_Securite, top3: [], nom: nom };
+                        
+                        // 2. Stockage pour le Menu Déroulant (Uniquement une fois par commune)
+                        if (!seenInsee.has(code)) {
+                            communeList.push({ code: code, nom: nom });
+                            seenInsee.add(code);
+                        }
+                    }
+                    
+                    // Stocker Top 3 Problèmes
+                    if (row.Classement <= 3 && row.Probleme) {
+                        communeData[code].top3.push(row.Probleme);
+                    }
+                });
+
+                // 3. Remplissage du Select (Tri alphabétique par NOM)
+                const select = document.getElementById('mairieFilter');
+                communeList.sort((a, b) => a.nom.localeCompare(b.nom));
+                
+                communeList.forEach(c => {
+                    const opt = document.createElement('option');
+                    opt.value = c.code; // Valeur = INSEE (pour le filtrage)
+                    opt.textContent = c.nom; // Texte = Nom Lisible
+                    select.appendChild(opt);
+                });
+                
+                // --- 2. CHARGEMENT CONTOURS COMMUNES ---
+                fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements/69-rhone/communes-69-rhone.geojson')
+                    .then(r => r.json())
+                    .then(geojson => {
+                        geojsonLayer = L.geoJson(geojson, { 
+                            style: feature => {
+                                const data = communeData[feature.properties.code];
+                                const note = data ? data.note : null;
+                                let color = '#e5e7eb';
+                                if (note) {
+                                    if (note > 3.8) color = '#86efac';
+                                    else if (note > 3.4) color = '#fde047';
+                                    else if (note > 2.8) color = '#fdba74';
+                                    else color = '#fca5a5';
+                                }
+                                return { fillColor: color, weight: 1, color: 'white', fillOpacity: 0.5 };
+                            },
+                            onEachFeature: (feature, layer) => {
+                                const code = feature.properties.code;
+                                const data = communeData[code];
+                                const nom = feature.properties.nom;
+                                let content = `<div class="commune-tooltip"><div class="commune-title">${nom}</div>`;
+                                
+                                if (data) {
+                                    content += `<div class="commune-score">Note Sécurité: ${data.note}/5</div>`;
+                                    // AJOUT DU TOP 3 ICI
+                                    if (data.top3.length > 0) {
+                                        content += `<div class="top-pb-title">Principaux Problèmes :</div><ul class="top-pb-list">`;
+                                        data.top3.forEach((pb, i) => content += `<li>${i+1}. ${pb}</li>`);
+                                        content += `</ul>`;
+                                    }
+                                } else {
+                                    content += `<div>Pas de données</div>`;
+                                }
+                                content += `</div>`;
+                                // Utilise 'leaflet-tooltip-empty' pour enlever le style par défaut de leaflet et utiliser le notre
+                                layer.bindTooltip(content, { sticky: true, className: 'leaflet-tooltip-empty' }); 
+                            }
+                        }).addTo(map);
+                        geojsonLayer.bringToBack();
+                        
+                        // --- 3. CHARGEMENT POINTS ---
+                        loadPoints();
+                    });
+            }
+        });
+
+        function loadPoints() {
+            Papa.parse('points_rouges_sans_travaux_priorise-2.csv', {
+                download: true, header: true, dynamicTyping: true,
+                complete: function(res) {
+                    const communesSet = new Set();
+                    
+                    res.data.forEach(row => {
+                        if (!row.latitude || !row.longitude) return;
+
+                        // Parsing des listes multi-valeurs
+                        const cats = parsePythonList(row.categories_detectees);
+                        const prios = parsePythonList(row.liste_priorite_label);
+                        const diffsLabel = parsePythonList(row.niveau_facilite_label_liste);
+                        const diffsScore = parsePythonListInt(row.liste_facilite);
+
+                        // Couleur du point : pire scénario
+                        let color = 'green';
+                        if (diffsScore.includes(2)) color = 'orange';
+                        if (diffsScore.includes(3)) color = 'red';
+
+                        const marker = L.marker([row.latitude, row.longitude], { icon: createCustomIcon(color) });
+                        
+                        // Construction HTML Popup
+                        let popupHTML = `<div class="popup-content"><div class="popup-description">"${row.description}"</div><hr style="opacity:0.3; margin:8px 0;">`;
+                        
+                        // Boucle pour créer les blocs par catégorie
+                        cats.forEach((cat, i) => {
+                            let pLabel = prios[i] ? prios[i].toUpperCase() : "MOYENNE";
+                            let pClass = "prio-moyenne";
+                            if (pLabel.includes("CRITIQUE")) pClass = "prio-critique";
+                            if (pLabel.includes("ELEVEE") || pLabel.includes("ÉLEVÉE")) pClass = "prio-elevee";
+                            if (pLabel.includes("FAIBLE")) pClass = "prio-faible";
+                            
+                            let dFull = diffsLabel[i] || "";
+                            let dSimple = "Moyen";
+                            if (dFull.includes("Facile")) dSimple = "Facile";
+                            if (dFull.includes("Difficile")) dSimple = "Difficile";
+                            
+                            let borderCol = '#fb923c'; // Orange
+                            if (dSimple === 'Facile') borderCol = '#22c55e';
+                            if (dSimple === 'Difficile') borderCol = '#ef4444';
+
+                            popupHTML += `
+                                <div class="cat-block" style="border-left-color: ${borderCol}">
+                                    <span class="cat-name">${cat}</span>
+                                    <div class="tag-row">
+                                        <span class="tag-prio ${pClass}">${pLabel}</span>
+                                        <span class="badge badge-${dSimple.toLowerCase()}">${dSimple}</span>
+                                    </div>
+                                </div>`;
+                        });
+                        
+                        // Ajout du Flux 
+                        const flux = row.flux_proche ? Math.round(row.flux_proche) : "N/A";
+                        popupHTML += `<div class="flux-info">Flux estimé : ${flux} vélos/j</div></div>`;
+
+                        marker.bindPopup(popupHTML, { maxWidth: 350 });
+                        markers.addLayer(marker);
+
+                        // Stockage optimisé pour filtrage
+                        allMarkers.push({
+                            marker: marker,
+                            cats: cats,
+                            catIds: cats.map(mapCategoryToFilter),
+                            commune: row.commune_insee ? String(row.commune_insee) : "Inconnu",
+                            prios: prios.map(p => p.toUpperCase().replace('É', 'E')),
+                            diffs: diffsLabel.map(d => {
+                                if(d.includes("Facile")) return "Facile";
+                                if(d.includes("Difficile")) return "Difficile";
+                                return "Moyen";
+                            })
+                        });
+                    });
+                    
+                    map.addLayer(markers);
+                }
+            });
+        }
+
+        // --- FILTRAGE ET ZOOM ---
+        function applyFilters() {
+            const mairieVal = document.getElementById('mairieFilter').value;
+            
+            // Zoom sur la commune sélectionnée
+            if (mairieVal === 'tous') {
+                map.setView([45.7640, 4.8357], 12);
+            } else {
+                if (geojsonLayer) {
+                    geojsonLayer.eachLayer(function(layer) {
+                        if (String(layer.feature.properties.code) === String(mairieVal)) {
+                            map.fitBounds(layer.getBounds(), { padding: [50, 50] });
+                        }
+                    });
+                }
+            }
+
+            // Récupération des états des filtres
+            const activeCats = [];
+            ['Amenagement', 'Entretien', 'Signalisation', 'Stationnement', 'Carrefour', 'Vitesse', 'Infrastructure', 'Autre']
+                .forEach(k => { if(document.getElementById('filter'+k).checked) activeCats.push('filter'+k); });
+
+            const activeDiffs = [];
+            ['Facile', 'Moyen', 'Difficile'].forEach(k => { if(document.getElementById('filter'+k).checked) activeDiffs.push(k); });
+
+            const activePrios = [];
+            ['Critique', 'Elevee', 'Moyenne', 'Faible'].forEach(k => { if(document.getElementById('prio'+k).checked) activePrios.push(k.toUpperCase()); });
+
+            markers.clearLayers();
+
+            // Filtrage Inclusif
+            allMarkers.forEach(item => {
+                let show = true;
+                
+                if (mairieVal !== 'tous' && item.commune !== mairieVal) show = false;
+
+                const hasCat = item.catIds.some(id => activeCats.includes(id));
+                if (!hasCat) show = false;
+
+                const hasDiff = item.diffs.some(d => activeDiffs.includes(d));
+                if (!hasDiff) show = false;
+
+                const hasPrio = item.prios.some(p => {
+                    let cleanP = p.replace('É', 'E'); 
+                    return activePrios.includes(cleanP);
+                });
+                if (!hasPrio) show = false;
+
+                if (show) markers.addLayer(item.marker);
+            });
+        }
+
+        function mapCategoryToFilter(cat) {
+            if (!cat) return 'filterAutre';
+            const c = cat.toLowerCase();
+            if (c.includes('infrastructure') || c.includes('manquante')) return 'filterInfrastructure';
+            if (c.includes('aménagement') || c.includes('inadapté')) return 'filterAmenagement';
+            if (c.includes('entretien') || c.includes('travaux')) return 'filterEntretien';
+            if (c.includes('signalisation')) return 'filterSignalisation';
+            if (c.includes('stationnement')) return 'filterStationnement';
+            if (c.includes('carrefour')) return 'filterCarrefour';
+            if (c.includes('vitesse') || c.includes('conflit')) return 'filterVitesse';
+            return 'filterAutre';
+        }
+
+        document.getElementById('mairieFilter').addEventListener('change', applyFilters);
+        document.querySelectorAll('input[type="checkbox"]').forEach(i => i.addEventListener('change', applyFilters));
+    </script>
+</body>
+</html>
