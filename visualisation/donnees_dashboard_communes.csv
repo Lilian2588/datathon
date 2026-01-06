@@ -1,0 +1,382 @@
+﻿Nom_Commune,INSEE,Total_Reponses_Commune,Note_Securite,Probleme,Nombre_Signalements,Classement
+Lyon,69123,6167,3.96,Infrastructure manquante,5064,1
+Lyon,69123,6167,3.96,Vitesse excessive,4915,2
+Lyon,69123,6167,3.96,Violence routière,3862,3
+Lyon,69123,6167,3.96,Conflit piétons,3435,4
+Lyon,69123,6167,3.96,Stationnement gênant,2725,5
+Lyon,69123,6167,3.96,Entretien pistes,2720,6
+Lyon,69123,6167,3.96,Signalisation,300,7
+Lyon,69123,6167,3.96,Carrefours dangereux,188,8
+Lyon,69123,6167,3.96,Stationnement vélo,14,9
+Lyon,69123,6167,3.96,Limitation trafic,7,10
+Villeurbanne,69266,1335,3.44,Infrastructure manquante,1159,1
+Villeurbanne,69266,1335,3.44,Vitesse excessive,1128,2
+Villeurbanne,69266,1335,3.44,Violence routière,902,3
+Villeurbanne,69266,1335,3.44,Conflit piétons,793,4
+Villeurbanne,69266,1335,3.44,Entretien pistes,731,5
+Villeurbanne,69266,1335,3.44,Stationnement gênant,505,6
+Villeurbanne,69266,1335,3.44,Signalisation,51,7
+Villeurbanne,69266,1335,3.44,Carrefours dangereux,38,8
+Villeurbanne,69266,1335,3.44,Stationnement vélo,2,9
+Villeurbanne,69266,1335,3.44,Limitation trafic,1,10
+Caluire-et-Cuire,69034,436,2.81,Infrastructure manquante,370,1
+Caluire-et-Cuire,69034,436,2.81,Vitesse excessive,343,2
+Caluire-et-Cuire,69034,436,2.81,Violence routière,274,3
+Caluire-et-Cuire,69034,436,2.81,Conflit piétons,253,4
+Caluire-et-Cuire,69034,436,2.81,Entretien pistes,219,5
+Caluire-et-Cuire,69034,436,2.81,Stationnement gênant,156,6
+Caluire-et-Cuire,69034,436,2.81,Carrefours dangereux,17,7
+Caluire-et-Cuire,69034,436,2.81,Signalisation,12,8
+Caluire-et-Cuire,69034,436,2.81,Stationnement vélo,2,9
+Oullins-Pierre-Bénite,69149,385,2.59,Vitesse excessive,305,1
+Oullins-Pierre-Bénite,69149,385,2.59,Infrastructure manquante,287,2
+Oullins-Pierre-Bénite,69149,385,2.59,Violence routière,223,3
+Oullins-Pierre-Bénite,69149,385,2.59,Conflit piétons,195,4
+Oullins-Pierre-Bénite,69149,385,2.59,Stationnement gênant,151,5
+Oullins-Pierre-Bénite,69149,385,2.59,Entretien pistes,142,6
+Oullins-Pierre-Bénite,69149,385,2.59,Signalisation,6,7
+Oullins-Pierre-Bénite,69149,385,2.59,Carrefours dangereux,3,8
+Bron,69029,284,3.56,Infrastructure manquante,243,1
+Bron,69029,284,3.56,Vitesse excessive,221,2
+Bron,69029,284,3.56,Violence routière,156,3
+Bron,69029,284,3.56,Conflit piétons,146,4
+Bron,69029,284,3.56,Stationnement gênant,129,5
+Bron,69029,284,3.56,Entretien pistes,118,6
+Bron,69029,284,3.56,Signalisation,16,7
+Bron,69029,284,3.56,Carrefours dangereux,15,8
+Bron,69029,284,3.56,Stationnement vélo,1,9
+Bron,69029,284,3.56,Limitation trafic,1,10
+Meyzieu,69282,268,3.22,Infrastructure manquante,218,1
+Meyzieu,69282,268,3.22,Vitesse excessive,182,2
+Meyzieu,69282,268,3.22,Entretien pistes,143,3
+Meyzieu,69282,268,3.22,Stationnement gênant,133,4
+Meyzieu,69282,268,3.22,Violence routière,113,5
+Meyzieu,69282,268,3.22,Conflit piétons,100,6
+Meyzieu,69282,268,3.22,Signalisation,8,7
+Meyzieu,69282,268,3.22,Carrefours dangereux,1,8
+Meyzieu,69282,268,3.22,Stationnement vélo,1,9
+Chassieu,69271,220,3.97,Infrastructure manquante,176,1
+Chassieu,69271,220,3.97,Vitesse excessive,155,2
+Chassieu,69271,220,3.97,Entretien pistes,106,3
+Chassieu,69271,220,3.97,Stationnement gênant,105,4
+Chassieu,69271,220,3.97,Violence routière,84,5
+Chassieu,69271,220,3.97,Conflit piétons,75,6
+Chassieu,69271,220,3.97,Signalisation,4,7
+Chassieu,69271,220,3.97,Carrefours dangereux,2,8
+Vaulx-en-Velin,69256,199,2.62,Infrastructure manquante,175,1
+Vaulx-en-Velin,69256,199,2.62,Vitesse excessive,168,2
+Vaulx-en-Velin,69256,199,2.62,Violence routière,124,3
+Vaulx-en-Velin,69256,199,2.62,Entretien pistes,116,4
+Vaulx-en-Velin,69256,199,2.62,Conflit piétons,108,5
+Vaulx-en-Velin,69256,199,2.62,Stationnement gênant,72,6
+Vaulx-en-Velin,69256,199,2.62,Carrefours dangereux,9,7
+Vaulx-en-Velin,69256,199,2.62,Stationnement vélo,3,8
+Vaulx-en-Velin,69256,199,2.62,Signalisation,3,9
+Saint-Priest,69290,192,2.9,Infrastructure manquante,167,1
+Saint-Priest,69290,192,2.9,Vitesse excessive,141,2
+Saint-Priest,69290,192,2.9,Entretien pistes,128,3
+Saint-Priest,69290,192,2.9,Violence routière,98,4
+Saint-Priest,69290,192,2.9,Conflit piétons,86,5
+Saint-Priest,69290,192,2.9,Stationnement gênant,78,6
+Saint-Priest,69290,192,2.9,Carrefours dangereux,6,7
+Saint-Priest,69290,192,2.9,Signalisation,5,8
+Tassin-la-Demi-Lune,69244,183,2.9,Infrastructure manquante,148,1
+Tassin-la-Demi-Lune,69244,183,2.9,Vitesse excessive,135,2
+Tassin-la-Demi-Lune,69244,183,2.9,Violence routière,110,3
+Tassin-la-Demi-Lune,69244,183,2.9,Conflit piétons,95,4
+Tassin-la-Demi-Lune,69244,183,2.9,Entretien pistes,78,5
+Tassin-la-Demi-Lune,69244,183,2.9,Stationnement gênant,60,6
+Tassin-la-Demi-Lune,69244,183,2.9,Carrefours dangereux,9,7
+Tassin-la-Demi-Lune,69244,183,2.9,Signalisation,6,8
+Décines-Charpieu,69275,158,3.02,Infrastructure manquante,137,1
+Décines-Charpieu,69275,158,3.02,Vitesse excessive,122,2
+Décines-Charpieu,69275,158,3.02,Entretien pistes,91,3
+Décines-Charpieu,69275,158,3.02,Violence routière,91,4
+Décines-Charpieu,69275,158,3.02,Stationnement gênant,74,5
+Décines-Charpieu,69275,158,3.02,Conflit piétons,74,6
+Décines-Charpieu,69275,158,3.02,Signalisation,4,7
+Décines-Charpieu,69275,158,3.02,Carrefours dangereux,2,8
+Décines-Charpieu,69275,158,3.02,Stationnement vélo,1,9
+Sainte-Foy-lès-Lyon,69202,155,3.5,Infrastructure manquante,117,1
+Sainte-Foy-lès-Lyon,69202,155,3.5,Vitesse excessive,112,2
+Sainte-Foy-lès-Lyon,69202,155,3.5,Violence routière,75,3
+Sainte-Foy-lès-Lyon,69202,155,3.5,Stationnement gênant,70,4
+Sainte-Foy-lès-Lyon,69202,155,3.5,Conflit piétons,63,5
+Sainte-Foy-lès-Lyon,69202,155,3.5,Entretien pistes,62,6
+Sainte-Foy-lès-Lyon,69202,155,3.5,Carrefours dangereux,2,7
+Sainte-Foy-lès-Lyon,69202,155,3.5,Stationnement vélo,1,8
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Infrastructure manquante,91,1
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Vitesse excessive,86,2
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Entretien pistes,56,3
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Stationnement gênant,53,4
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Violence routière,48,5
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Conflit piétons,44,6
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Signalisation,3,7
+Saint-Didier-au-Mont-d'Or,69194,135,2.69,Limitation trafic,1,8
+Rillieux-la-Pape,69286,117,3.08,Infrastructure manquante,92,1
+Rillieux-la-Pape,69286,117,3.08,Vitesse excessive,81,2
+Rillieux-la-Pape,69286,117,3.08,Violence routière,65,3
+Rillieux-la-Pape,69286,117,3.08,Entretien pistes,51,4
+Rillieux-la-Pape,69286,117,3.08,Conflit piétons,49,5
+Rillieux-la-Pape,69286,117,3.08,Stationnement gênant,46,6
+Rillieux-la-Pape,69286,117,3.08,Carrefours dangereux,3,7
+Rillieux-la-Pape,69286,117,3.08,Signalisation,1,8
+Rillieux-la-Pape,69286,117,3.08,Stationnement vélo,1,9
+Francheville,69089,109,2.66,Infrastructure manquante,85,1
+Francheville,69089,109,2.66,Vitesse excessive,84,2
+Francheville,69089,109,2.66,Violence routière,56,3
+Francheville,69089,109,2.66,Conflit piétons,53,4
+Francheville,69089,109,2.66,Entretien pistes,47,5
+Francheville,69089,109,2.66,Stationnement gênant,40,6
+Francheville,69089,109,2.66,Stationnement vélo,1,7
+Saint-Genis-Laval,69204,107,3.46,Vitesse excessive,90,1
+Saint-Genis-Laval,69204,107,3.46,Infrastructure manquante,88,2
+Saint-Genis-Laval,69204,107,3.46,Violence routière,60,3
+Saint-Genis-Laval,69204,107,3.46,Conflit piétons,54,4
+Saint-Genis-Laval,69204,107,3.46,Stationnement gênant,53,5
+Saint-Genis-Laval,69204,107,3.46,Entretien pistes,48,6
+Saint-Genis-Laval,69204,107,3.46,Signalisation,4,7
+Saint-Genis-Laval,69204,107,3.46,Carrefours dangereux,2,8
+Craponne,69069,107,3.1,Vitesse excessive,80,1
+Craponne,69069,107,3.1,Infrastructure manquante,79,2
+Craponne,69069,107,3.1,Entretien pistes,45,3
+Craponne,69069,107,3.1,Violence routière,45,4
+Craponne,69069,107,3.1,Stationnement gênant,43,5
+Craponne,69069,107,3.1,Conflit piétons,42,6
+Craponne,69069,107,3.1,Signalisation,7,7
+Craponne,69069,107,3.1,Carrefours dangereux,1,8
+Dardilly,69072,100,3.36,Infrastructure manquante,79,1
+Dardilly,69072,100,3.36,Vitesse excessive,72,2
+Dardilly,69072,100,3.36,Stationnement gênant,42,3
+Dardilly,69072,100,3.36,Entretien pistes,42,4
+Dardilly,69072,100,3.36,Violence routière,37,5
+Dardilly,69072,100,3.36,Conflit piétons,36,6
+Dardilly,69072,100,3.36,Signalisation,2,7
+Dardilly,69072,100,3.36,Carrefours dangereux,1,8
+Champagne-au-Mont-d'Or,69040,100,3.14,Vitesse excessive,58,1
+Champagne-au-Mont-d'Or,69040,100,3.14,Infrastructure manquante,55,2
+Champagne-au-Mont-d'Or,69040,100,3.14,Violence routière,41,3
+Champagne-au-Mont-d'Or,69040,100,3.14,Conflit piétons,38,4
+Champagne-au-Mont-d'Or,69040,100,3.14,Stationnement gênant,33,5
+Champagne-au-Mont-d'Or,69040,100,3.14,Entretien pistes,25,6
+Champagne-au-Mont-d'Or,69040,100,3.14,Carrefours dangereux,2,7
+Vénissieux,69259,99,2.97,Infrastructure manquante,82,1
+Vénissieux,69259,99,2.97,Vitesse excessive,74,2
+Vénissieux,69259,99,2.97,Violence routière,59,3
+Vénissieux,69259,99,2.97,Entretien pistes,56,4
+Vénissieux,69259,99,2.97,Conflit piétons,45,5
+Vénissieux,69259,99,2.97,Stationnement gênant,40,6
+Vénissieux,69259,99,2.97,Signalisation,3,7
+Vénissieux,69259,99,2.97,Carrefours dangereux,2,8
+Écully,69081,99,3.31,Infrastructure manquante,83,1
+Écully,69081,99,3.31,Vitesse excessive,80,2
+Écully,69081,99,3.31,Violence routière,50,3
+Écully,69081,99,3.31,Entretien pistes,48,4
+Écully,69081,99,3.31,Stationnement gênant,45,5
+Écully,69081,99,3.31,Conflit piétons,41,6
+Écully,69081,99,3.31,Signalisation,3,7
+Écully,69081,99,3.31,Carrefours dangereux,2,8
+Écully,69081,99,3.31,Stationnement vélo,1,9
+Sathonay-Camp,69292,94,3.87,Vitesse excessive,65,1
+Sathonay-Camp,69292,94,3.87,Infrastructure manquante,63,2
+Sathonay-Camp,69292,94,3.87,Violence routière,40,3
+Sathonay-Camp,69292,94,3.87,Entretien pistes,37,4
+Sathonay-Camp,69292,94,3.87,Conflit piétons,34,5
+Sathonay-Camp,69292,94,3.87,Stationnement gênant,33,6
+Sathonay-Camp,69292,94,3.87,Carrefours dangereux,2,7
+Sathonay-Camp,69292,94,3.87,Signalisation,1,8
+Saint-Genis-les-Ollières,69205,83,2.87,Infrastructure manquante,67,1
+Saint-Genis-les-Ollières,69205,83,2.87,Vitesse excessive,60,2
+Saint-Genis-les-Ollières,69205,83,2.87,Entretien pistes,39,3
+Saint-Genis-les-Ollières,69205,83,2.87,Stationnement gênant,30,4
+Saint-Genis-les-Ollières,69205,83,2.87,Conflit piétons,30,5
+Saint-Genis-les-Ollières,69205,83,2.87,Violence routière,29,6
+Saint-Genis-les-Ollières,69205,83,2.87,Carrefours dangereux,1,7
+Saint-Genis-les-Ollières,69205,83,2.87,Signalisation,1,8
+Jonage,69279,80,3.3,Infrastructure manquante,60,1
+Jonage,69279,80,3.3,Vitesse excessive,50,2
+Jonage,69279,80,3.3,Entretien pistes,43,3
+Jonage,69279,80,3.3,Stationnement gênant,30,4
+Jonage,69279,80,3.3,Violence routière,25,5
+Jonage,69279,80,3.3,Conflit piétons,18,6
+Jonage,69279,80,3.3,Carrefours dangereux,3,7
+Jonage,69279,80,3.3,Stationnement vélo,1,8
+Neuville-sur-Saône,69143,78,3.5,Infrastructure manquante,59,1
+Neuville-sur-Saône,69143,78,3.5,Vitesse excessive,51,2
+Neuville-sur-Saône,69143,78,3.5,Entretien pistes,32,3
+Neuville-sur-Saône,69143,78,3.5,Stationnement gênant,27,4
+Neuville-sur-Saône,69143,78,3.5,Violence routière,25,5
+Neuville-sur-Saône,69143,78,3.5,Conflit piétons,23,6
+Neuville-sur-Saône,69143,78,3.5,Carrefours dangereux,4,7
+Neuville-sur-Saône,69143,78,3.5,Signalisation,3,8
+Neuville-sur-Saône,69143,78,3.5,Stationnement vélo,1,9
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Infrastructure manquante,60,1
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Vitesse excessive,51,2
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Entretien pistes,33,3
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Stationnement gênant,26,4
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Violence routière,17,5
+Saint-Germain-au-Mont-d'Or,69207,75,3.99,Conflit piétons,16,6
+Charbonnières-les-Bains,69044,74,3.15,Vitesse excessive,54,1
+Charbonnières-les-Bains,69044,74,3.15,Infrastructure manquante,53,2
+Charbonnières-les-Bains,69044,74,3.15,Violence routière,32,3
+Charbonnières-les-Bains,69044,74,3.15,Stationnement gênant,32,4
+Charbonnières-les-Bains,69044,74,3.15,Entretien pistes,30,5
+Charbonnières-les-Bains,69044,74,3.15,Conflit piétons,29,6
+Charbonnières-les-Bains,69044,74,3.15,Carrefours dangereux,3,7
+Charbonnières-les-Bains,69044,74,3.15,Signalisation,2,8
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Infrastructure manquante,47,1
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Vitesse excessive,46,2
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Violence routière,33,3
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Entretien pistes,29,4
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Conflit piétons,28,5
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Stationnement gênant,25,6
+Saint-Cyr-au-Mont-d'Or,69191,67,2.86,Signalisation,2,7
+Givors,69091,66,3.02,Infrastructure manquante,37,1
+Givors,69091,66,3.02,Vitesse excessive,33,2
+Givors,69091,66,3.02,Entretien pistes,23,3
+Givors,69091,66,3.02,Violence routière,19,4
+Givors,69091,66,3.02,Stationnement gênant,19,5
+Givors,69091,66,3.02,Conflit piétons,17,6
+Corbas,69273,65,3.52,Infrastructure manquante,57,1
+Corbas,69273,65,3.52,Vitesse excessive,44,2
+Corbas,69273,65,3.52,Entretien pistes,38,3
+Corbas,69273,65,3.52,Stationnement gênant,29,4
+Corbas,69273,65,3.52,Violence routière,23,5
+Corbas,69273,65,3.52,Conflit piétons,16,6
+Corbas,69273,65,3.52,Carrefours dangereux,1,7
+Corbas,69273,65,3.52,Signalisation,1,8
+Feyzin,69276,64,3.54,Infrastructure manquante,44,1
+Feyzin,69276,64,3.54,Vitesse excessive,40,2
+Feyzin,69276,64,3.54,Entretien pistes,37,3
+Feyzin,69276,64,3.54,Stationnement gênant,22,4
+Feyzin,69276,64,3.54,Violence routière,22,5
+Feyzin,69276,64,3.54,Conflit piétons,16,6
+Feyzin,69276,64,3.54,Carrefours dangereux,4,7
+Marcy-l'Étoile,69127,62,3.13,Infrastructure manquante,49,1
+Marcy-l'Étoile,69127,62,3.13,Vitesse excessive,46,2
+Marcy-l'Étoile,69127,62,3.13,Entretien pistes,23,3
+Marcy-l'Étoile,69127,62,3.13,Conflit piétons,18,4
+Marcy-l'Étoile,69127,62,3.13,Violence routière,17,5
+Marcy-l'Étoile,69127,62,3.13,Stationnement gênant,16,6
+Saint-Fons,69199,62,2.64,Vitesse excessive,53,1
+Saint-Fons,69199,62,2.64,Infrastructure manquante,51,2
+Saint-Fons,69199,62,2.64,Violence routière,40,3
+Saint-Fons,69199,62,2.64,Conflit piétons,35,4
+Saint-Fons,69199,62,2.64,Stationnement gênant,28,5
+Saint-Fons,69199,62,2.64,Entretien pistes,25,6
+Saint-Fons,69199,62,2.64,Carrefours dangereux,2,7
+Saint-Fons,69199,62,2.64,Signalisation,2,8
+Mions,69283,61,3.25,Infrastructure manquante,51,1
+Mions,69283,61,3.25,Vitesse excessive,45,2
+Mions,69283,61,3.25,Entretien pistes,33,3
+Mions,69283,61,3.25,Violence routière,21,4
+Mions,69283,61,3.25,Conflit piétons,19,5
+Mions,69283,61,3.25,Stationnement gênant,18,6
+Mions,69283,61,3.25,Carrefours dangereux,2,7
+Mions,69283,61,3.25,Signalisation,2,8
+La Mulatière,69142,60,2.79,Vitesse excessive,52,1
+La Mulatière,69142,60,2.79,Infrastructure manquante,48,2
+La Mulatière,69142,60,2.79,Violence routière,35,3
+La Mulatière,69142,60,2.79,Conflit piétons,34,4
+La Mulatière,69142,60,2.79,Entretien pistes,14,5
+La Mulatière,69142,60,2.79,Stationnement gênant,14,6
+La Mulatière,69142,60,2.79,Signalisation,1,7
+La Mulatière,69142,60,2.79,Carrefours dangereux,1,8
+Sathonay-Village,69293,58,2.15,Infrastructure manquante,50,1
+Sathonay-Village,69293,58,2.15,Vitesse excessive,44,2
+Sathonay-Village,69293,58,2.15,Entretien pistes,32,3
+Sathonay-Village,69293,58,2.15,Violence routière,30,4
+Sathonay-Village,69293,58,2.15,Conflit piétons,27,5
+Sathonay-Village,69293,58,2.15,Stationnement gênant,24,6
+Sathonay-Village,69293,58,2.15,Carrefours dangereux,3,7
+Sathonay-Village,69293,58,2.15,Signalisation,3,8
+Fontaines-sur-Saône,69088,56,3.18,Infrastructure manquante,44,1
+Fontaines-sur-Saône,69088,56,3.18,Vitesse excessive,44,2
+Fontaines-sur-Saône,69088,56,3.18,Violence routière,28,3
+Fontaines-sur-Saône,69088,56,3.18,Conflit piétons,27,4
+Fontaines-sur-Saône,69088,56,3.18,Entretien pistes,21,5
+Fontaines-sur-Saône,69088,56,3.18,Stationnement gênant,20,6
+Fontaines-sur-Saône,69088,56,3.18,Carrefours dangereux,5,7
+Fontaines-sur-Saône,69088,56,3.18,Stationnement vélo,1,8
+Albigny-sur-Saône,69003,56,3.62,Infrastructure manquante,35,1
+Albigny-sur-Saône,69003,56,3.62,Vitesse excessive,35,2
+Albigny-sur-Saône,69003,56,3.62,Entretien pistes,23,3
+Albigny-sur-Saône,69003,56,3.62,Violence routière,17,4
+Albigny-sur-Saône,69003,56,3.62,Conflit piétons,15,5
+Albigny-sur-Saône,69003,56,3.62,Stationnement gênant,14,6
+Albigny-sur-Saône,69003,56,3.62,Carrefours dangereux,2,7
+Albigny-sur-Saône,69003,56,3.62,Signalisation,1,8
+Irigny,69100,52,3.28,Infrastructure manquante,44,1
+Irigny,69100,52,3.28,Vitesse excessive,37,2
+Irigny,69100,52,3.28,Entretien pistes,26,3
+Irigny,69100,52,3.28,Violence routière,17,4
+Irigny,69100,52,3.28,Conflit piétons,15,5
+Irigny,69100,52,3.28,Stationnement gênant,14,6
+Irigny,69100,52,3.28,Signalisation,2,7
+Genay,69278,51,2.8,Vitesse excessive,37,1
+Genay,69278,51,2.8,Infrastructure manquante,34,2
+Genay,69278,51,2.8,Entretien pistes,22,3
+Genay,69278,51,2.8,Violence routière,18,4
+Genay,69278,51,2.8,Conflit piétons,17,5
+Genay,69278,51,2.8,Stationnement gênant,10,6
+Genay,69278,51,2.8,Carrefours dangereux,2,7
+Curis-au-Mont-d'Or,69071,48,3.59,Vitesse excessive,40,1
+Curis-au-Mont-d'Or,69071,48,3.59,Infrastructure manquante,34,2
+Curis-au-Mont-d'Or,69071,48,3.59,Violence routière,23,3
+Curis-au-Mont-d'Or,69071,48,3.59,Conflit piétons,21,4
+Curis-au-Mont-d'Or,69071,48,3.59,Stationnement gênant,15,5
+Curis-au-Mont-d'Or,69071,48,3.59,Entretien pistes,11,6
+Curis-au-Mont-d'Or,69071,48,3.59,Signalisation,2,7
+Curis-au-Mont-d'Or,69071,48,3.59,Stationnement vélo,1,8
+Curis-au-Mont-d'Or,69071,48,3.59,Carrefours dangereux,1,9
+Collonges-au-Mont-d'Or,69063,48,3.32,Infrastructure manquante,35,1
+Collonges-au-Mont-d'Or,69063,48,3.32,Vitesse excessive,29,2
+Collonges-au-Mont-d'Or,69063,48,3.32,Entretien pistes,25,3
+Collonges-au-Mont-d'Or,69063,48,3.32,Conflit piétons,20,4
+Collonges-au-Mont-d'Or,69063,48,3.32,Stationnement gênant,17,5
+Collonges-au-Mont-d'Or,69063,48,3.32,Violence routière,16,6
+Collonges-au-Mont-d'Or,69063,48,3.32,Carrefours dangereux,2,7
+Collonges-au-Mont-d'Or,69063,48,3.32,Signalisation,1,8
+La Tour-de-Salvagny,69250,46,3.92,Infrastructure manquante,32,1
+La Tour-de-Salvagny,69250,46,3.92,Vitesse excessive,25,2
+La Tour-de-Salvagny,69250,46,3.92,Entretien pistes,22,3
+La Tour-de-Salvagny,69250,46,3.92,Stationnement gênant,20,4
+La Tour-de-Salvagny,69250,46,3.92,Violence routière,15,5
+La Tour-de-Salvagny,69250,46,3.92,Conflit piétons,12,6
+La Tour-de-Salvagny,69250,46,3.92,Carrefours dangereux,1,7
+La Tour-de-Salvagny,69250,46,3.92,Limitation trafic,1,8
+Charly,69046,40,2.56,Infrastructure manquante,35,1
+Charly,69046,40,2.56,Vitesse excessive,28,2
+Charly,69046,40,2.56,Entretien pistes,22,3
+Charly,69046,40,2.56,Stationnement gênant,15,4
+Charly,69046,40,2.56,Violence routière,10,5
+Charly,69046,40,2.56,Conflit piétons,9,6
+Charly,69046,40,2.56,Signalisation,1,7
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Infrastructure manquante,17,1
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Vitesse excessive,17,2
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Stationnement gênant,9,3
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Entretien pistes,9,4
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Violence routière,8,5
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Conflit piétons,8,6
+Poleymieux-au-Mont-d'Or,69153,34,2.55,Signalisation,1,7
+Limonest,69116,33,2.42,Infrastructure manquante,22,1
+Limonest,69116,33,2.42,Vitesse excessive,21,2
+Limonest,69116,33,2.42,Violence routière,18,3
+Limonest,69116,33,2.42,Conflit piétons,16,4
+Limonest,69116,33,2.42,Stationnement gênant,11,5
+Limonest,69116,33,2.42,Entretien pistes,7,6
+Limonest,69116,33,2.42,Carrefours dangereux,2,7
+Limonest,69116,33,2.42,Signalisation,1,8
+Couzon-au-Mont-d'Or,69068,33,4.25,Stationnement gênant,20,1
+Couzon-au-Mont-d'Or,69068,33,4.25,Infrastructure manquante,20,2
+Couzon-au-Mont-d'Or,69068,33,4.25,Vitesse excessive,19,3
+Couzon-au-Mont-d'Or,69068,33,4.25,Violence routière,12,4
+Couzon-au-Mont-d'Or,69068,33,4.25,Entretien pistes,12,5
+Couzon-au-Mont-d'Or,69068,33,4.25,Conflit piétons,11,6
+Couzon-au-Mont-d'Or,69068,33,4.25,Carrefours dangereux,2,7
+Cailloux-sur-Fontaines,69033,30,3.29,Infrastructure manquante,26,1
+Cailloux-sur-Fontaines,69033,30,3.29,Vitesse excessive,22,2
+Cailloux-sur-Fontaines,69033,30,3.29,Entretien pistes,14,3
+Cailloux-sur-Fontaines,69033,30,3.29,Violence routière,8,4
+Cailloux-sur-Fontaines,69033,30,3.29,Stationnement gênant,8,5
+Cailloux-sur-Fontaines,69033,30,3.29,Conflit piétons,7,6
